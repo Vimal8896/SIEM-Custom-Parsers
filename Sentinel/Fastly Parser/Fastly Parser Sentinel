@@ -1,0 +1,37 @@
+Fastly_CL 
+
+| extend parsed_log = parse_json(RawData)  // Using RawData instead of raw_log 
+
+| project  
+
+    timestamp = tostring(parsed_log.timestamp),  
+
+    client_ip = tostring(parsed_log.client_ip), 
+
+    geo_country = tostring(parsed_log.geo_country), 
+
+    geo_city = tostring(parsed_log.geo_city), 
+
+    host = tostring(parsed_log.host), 
+
+    url = tostring(parsed_log.url), 
+
+    request_method = tostring(parsed_log.request_method), 
+
+    request_protocol = tostring(parsed_log.request_protocol), 
+
+    request_referer = tostring(parsed_log.request_referer), 
+
+    request_user_agent = tostring(parsed_log.request_user_agent), 
+
+    response_state = tostring(parsed_log.response_state), 
+
+    response_status = toint(parsed_log.response_status), 
+
+    response_reason = tostring(parsed_log.response_reason), 
+
+    response_body_size = toint(parsed_log.response_body_size), 
+
+    fastly_server = tostring(parsed_log.fastly_server), 
+
+    fastly_is_edge = tobool(parsed_log.fastly_is_edge) 
