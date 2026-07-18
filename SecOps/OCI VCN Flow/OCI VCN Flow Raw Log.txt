@@ -1,0 +1,16 @@
+{
+  "flowid": "d7be5fdf",
+  "version": "2",
+  "sourceAddress": "10.100.9.186",
+  "destinationAddress": "10.100.9.69",
+  "sourcePort": 1521,
+  "destinationPort": 34364,
+  "bytesOut": 192,
+  "protocol": 6,
+  "protocolName": "TCP",
+  "packets": 1,
+  "status": "OK",
+  "startTime": 1782449387,
+  "endTime": 1782449387,
+  "action": "ACCEPT"
+}
